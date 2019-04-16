@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { fetchHouses } from '../../thunks/fetchHouses';
+import { connect } from 'react-redux';
 
 class App extends Component {
+  componentDidMount() {
+    this.props.fetchHouses('http://localhost:3001/api/v1/houses')
+  }
 
   render() {
     return (
@@ -18,4 +23,8 @@ class App extends Component {
   }
 }
 
-export default App;
+export const mapDispatchToProps = (dispatch) => ({
+  fetchHouses: (url) => dispatch(fetchHouses(url))
+})
+
+export default connect(null, mapDispatchToProps)(App);
