@@ -5,12 +5,12 @@ export const House = (props) => {
   return (
     <div className='house'>
       <h3>{props.name}</h3>
-      <p>{props.founded}</p>
-      <p>{props.seats}</p>
-      <p>{props.titles}</p>
-      <p>{props.coatOfArms}</p>
-      <p>{props.ancestralWeapons}</p>
-      <p>{props.words}</p>
+      <p>Founded: {props.founded || 'N/A'}</p>
+      <p>Seats: {props.seats}</p>
+      <p>Titles: {props.titles}</p>
+      <p>Coat Of Arms: {props.coatOfArms}</p>
+      <p>Ancestral Weapons: {props.ancestralWeapons}</p>
+      <p>Words: {props.words || 'N/A'}</p>
     </div>
   )
 }
