@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import { House } from '../House/House';
+import './HouseContainer.css';
 
 export class HouseContainer extends Component {
   renderCards = () => {
@@ -12,7 +13,7 @@ export class HouseContainer extends Component {
 
   render() {
     return (
-      <div>
+      <div className='container'>
         {this.renderCards()}
       </div>
     )

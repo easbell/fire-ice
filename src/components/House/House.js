@@ -1,8 +1,9 @@
 import React from 'react';
+import './House.css';
 
 export const House = (props) => {
   return (
-    <div>
+    <div className='house'>
       <h3>{props.name}</h3>
       <p>{props.founded}</p>
       <p>{props.seats}</p>
