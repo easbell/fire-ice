@@ -9,6 +9,10 @@
   animation: snow 15s linear infinite;
 }
 
+.loading {
+  width: 80%;
+}
+
 .App-logo {
   transition: all 2s ease-in-out;
   height: 180px;

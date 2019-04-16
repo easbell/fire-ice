@@ -4,6 +4,7 @@ import './App.css';
 import { fetchHouses } from '../../thunks/fetchHouses';
 import { connect } from 'react-redux';
 import HouseContainer from '../HouseContainer/HouseContainer';
+import load from '../../assets/wolf.gif'
 
 export class App extends Component {
   componentDidMount() {
@@ -19,7 +20,7 @@ export class App extends Component {
           <h2>Welcome to Westeros</h2>
         </div>
         <div className='Display-info'>
-          {loading && <img src='src/assets/wolf.gif'/>}
+          {loading && <img className='loading' src={load}/>}
           {!loading && <HouseContainer />}
         </div>
       </div>
